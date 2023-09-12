@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --main-font: "Poppins";
+    --main-green: #ddedea;
+    --green-selected: #afc3bf;
+    --green-dark: #546b6b;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--main-font);
+    font-size: calc(18px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+p {
+    margin: 0;
+    font-family: var(--main-font);
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-weight: 500;
+}
+
+input, li {
+    font-family: var(--main-font);
+}
+
+.icon-styles {
+    color: var(--green-dark);
+    cursor: pointer;
+}
+
+.icon-styles:hover{
+    color: var(--green-selected);
+}
+
+/* ------------------------------------------------------ */
+
+.app-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    width: 600px;
+    min-width: 300px;
+    height: 500px;
+    box-shadow:
+    2.6px 2.4px 5.3px rgba(0, 0, 0, 0.15),
+    8.7px 8px 17.9px rgba(0, 0, 0, 0.089),
+    39px 36px 80px rgba(0, 0, 0, 0.061);
+}
+
+.title-container {
+    background: var(--main-green);
+    color: var(--green-dark);
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body-container {
+    padding: 2rem 4rem;
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px;
+    margin-inline: 1rem;
+    margin-block: 0.2rem;
+}
+
+.flex-gap {
+    display: flex;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.flex-gap input {
+    border-top-left-radius: 4px ;
+    border-bottom-left-radius: 4px;
+    border: 2.5px solid var(--green-dark);
+    height: 25px;
+    width: inherit;
+    padding: 5px 10px;
+}
+
+.flex-gap button {
+  width: 100px;
+  padding: 5px 10px;
+  border-top-right-radius: 4px ;
+  border-bottom-right-radius: 4px;
+  border: none;
+  background: var(--green-dark);
+  color: white;
+}
+
+.flex-gap button:hover {
+    background: var(--green-selected);
+    color: var(--green-dark);
+
+}
+
+.todo-container {
+    margin-top: 10px;
+    overflow-y: scroll;
+    height: 300px;   
+}
+
+.each-todo {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px;
+}
+
+.default-style {
+    color: var(--green-dark);
+    cursor: pointer;
+}
+
+.default-style:hover {
+    color: var(--main-green);
+
+}
+
+.completed-task {
+    text-decoration:line-through;
+    color: var(--green-selected);
+}
+
+/* SWEET ALERT----------------------------------- */
+
+label.swal2-input-label,
+#swal2-textarea  {
+    font-family: var(--main-font);
+}
+
+.swal2-confirm.swal2-styled {
+    background: #9dd2c7;
+    width: 80px;
+}
+
+
+/* ----------------------------------- */
+
+@media only screen and (max-width: 700px) {
+
+    li {
+        font-size: 14px ;
+    }
+    
+    .body-container {
+        padding: 2rem;
+    }
+}
